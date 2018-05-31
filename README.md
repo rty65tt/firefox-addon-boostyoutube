@@ -13,14 +13,14 @@ View Video Thumbnails.
 
 Show current video playback rate and video resolution in OSD.
 
-![](https://raw.githubusercontent.com/rty65tt/firefox-addon-boostyoutube/master/screenshot1.png)
+![](https://raw.githubusercontent.com/rty65tt/firefox-addon-boostyoutube/master/screenshot1.jpg)
 
 
 Switch scale video to real resolution (press 'R' in fullscreen).
 
-![](https://raw.githubusercontent.com/rty65tt/firefox-addon-boostyoutube/master/screenshot2.png)
+![](https://raw.githubusercontent.com/rty65tt/firefox-addon-boostyoutube/master/screenshot2.jpg)
 
 
 Stop video auto play.
 
-![](https://raw.githubusercontent.com/rty65tt/firefox-addon-boostyoutube/master/screenshot4.png)
+![](https://raw.githubusercontent.com/rty65tt/firefox-addon-boostyoutube/master/screenshot4.jpg)
