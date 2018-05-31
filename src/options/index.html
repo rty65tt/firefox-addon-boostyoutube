@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-size: 16px;
+      color:#000;
+    }
+    label {
+      color:#212121;
+      font-weight: bold;
+    }
+    td {
+      vertical-align: top;
+    }
+    .red {
+      background-color: #d88;
+      color: #000;
+      padding: 0 7px;
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+
+  <table>
+    <tr>
+      <td>
+        <input type="checkbox" id="stopvideo" checked="checked">
+      </td>
+      <td>
+        <label for="stopvideo">Stop Video Auto Play.</label><br>
+        Auto-buffering (auto-playing)
+        <br><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" id="showrate" checked="checked">
+      </td>
+      <td>
+        <label for="showrate">Show Video Playback Speed\Rate in OSD.</label>
+        <br><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" id="showres" checked="checked">
+      </td>
+      <td>
+        <label for="showres">Show Video Resolution in OSD.</label>
+        <br><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" id="scale" checked="checked">
+      </td>
+      <td>
+        <label for="scale">Switch Scale Video in Fullscreen Mode.</label><br>
+        In FullScreen press 'R' key, for scale video to real resolution size.
+        <br><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" id="hidectrls" checked="checked">
+      </td>
+      <td>
+        <label for="hidectrls">Hide Playback Controls in Fullsceen Mode.</label><br>
+        Move mouse pointer to left screen border (5px).<br>
+        <span class="red">Not working in embed video (sorry)!</span>
+        <br><br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" id="shortcut" checked="checked">
+      </td>
+      <td>
+        <label for="shortcut">Shortcut "Alt+Y".</label><br>
+        Open new tab link "https://www.youtube.com/feed/subscriptions".
+        <br><br>
+      </td>
+    </tr>
+  </table>
+  <div>
+    <button id="save" >Save</button>
+    <span id="status"></span>
+  </div>
+
+
+  <script src="index.js"></script>
+</body>
+</html>

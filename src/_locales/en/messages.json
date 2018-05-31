@@ -1,0 +1,10 @@
+{
+   "appName": {
+      "description": "The app name",
+      "message": "Boost YouTube"
+   },
+   "appDescription": {
+      "description": "The app description",
+      "message": "Switch scale video to real resolution. Show current video playback rate and video resolution in OSD. Hide playback controls in fullsceen. Shortcut \"Alt+Y\" open YouTube in new tab (>=48 ver.). View Video Thumbnails (>=59 ver)."
+   }
+}

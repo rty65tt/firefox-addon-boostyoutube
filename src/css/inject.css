@@ -1,0 +1,25 @@
+.ytpbi {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    text-shadow: 0 0 1px #000;
+    color: #eee;
+    z-index: 1000;
+    padding: 0px 6px;
+    font-size: 150%;
+    background-color: #131313;
+ }
+
+.ytp-fullscreen .ytpbi
+{
+    top: 60px;
+ }
+
+.ytp-autohide .ytpbi,
+.ytp-hide-info-bar .ytpbi
+{
+    top: 10px;
+ }
+
+.ytpbi-vidres {color:#798;}
+.ytpbi-speed {color:#ddd;}

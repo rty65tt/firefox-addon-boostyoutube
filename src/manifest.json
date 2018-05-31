@@ -1,0 +1,55 @@
+{
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDescription__",
+  "homepage_url": "https://github.com/rty65tt/firefox-addon-boostyoutube",
+  "author": "rty65tt",
+  "manifest_version": 2,
+  "version": "1.0",
+  "default_locale": "en",
+  "short_name": "boostyoutube",
+  "permissions": [
+    "activeTab", "storage"
+  ],
+  "content_scripts": [ {
+     "matches": [ 
+        "https://www.youtube.com/*"
+     ],
+     "css": [ "css/inject.css" ],
+     "js": [ "inject.js" ],
+     "all_frames": true
+  } ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_ui": {
+    "page": "options/index.html"
+  },
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "commands" : {
+    "OpenYouTubeTab" : {
+      "suggested_key" : {
+        "default" : "Alt+Y",
+        "mac" : "Alt+Y"
+      },
+      "description" : "Alt+Y Open YouTube Page."
+    }
+  },
+  "page_action": {
+     "show_matches": [
+        "https://*.youtube.com/watch*",
+        "https://www.youtube.com/embed/*",
+        "https://i.ytimg.com/vi/*"
+      ],
+     "default_icon": { "19":"icons/icon.svg" },
+     "default_title": "Open|Switch [maxres|sd|hq]default.jpg"
+  },
+  "applications": {
+    "gecko": {
+      "id": "boostyoutube@mozilla.org",
+      "strict_min_version": "52.0"
+    }
+  }
+}
