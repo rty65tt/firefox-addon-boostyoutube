@@ -48,7 +48,7 @@
   },
   "applications": {
     "gecko": {
-      "id": "boostyoutube@mozilla.org",
+      "id": "boostyoutube@rty65tt.org",
       "strict_min_version": "52.0"
     }
   }
