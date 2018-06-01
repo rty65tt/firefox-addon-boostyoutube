@@ -1,6 +1,6 @@
 # firefox-addon-boostyoutube
 ## Boost YouTube Firefox Addon
-
+[https://addons.mozilla.org/ru/firefox/addon/boost-youtube/](https://addons.mozilla.org/ru/firefox/addon/boost-youtube/)
 
 - Stop video auto play.
 - Switch scale video to real resolution (press 'R' in fullscreen).

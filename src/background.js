@@ -83,3 +83,9 @@ browser.storage.onChanged.addListener(changeListerFn);
 //     browser.tabs.onUpdated.removeListener(updateicon);
 //   });
 // }
+
+
+// browser.tabs.onCreated.addListener(changebg);
+// browser.tabs.onActivated.addListener(changebg);
+// browser.tabs.onUpdated.addListener(changebg);
+
