@@ -2,7 +2,7 @@
 <svg width="48" height="48" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(20.203,-304.12)">
   <rect x="-20.203" y="308.12" width="48" height="40" fill="#dcc8c8" fill-rule="evenodd" stroke-width=".91287" style="paint-order:stroke markers fill"/>
-  <path d="m14.696 338.54h-21.963c-2.156 0-3.904-1.3466-3.904-3.0076v-14.996c0-1.661 1.7479-3.0076 3.904-3.0076h21.963c2.156 0 3.904 1.3466 3.904 3.0076v14.996c0 1.661-1.7479 3.0076-3.904 3.0076z" fill="#e21b1b" stroke-width=".11941" style="paint-order:markers fill stroke"/>
+  <path d="m14.696 338.54h-21.963c-2.156 0-3.904-1.3466-3.904-3.0076v-14.996c0-1.661 1.7479-3.0076 3.904-3.0076h21.963c2.156 0 3.904 1.3466 3.904 3.0076v14.996c0 1.661-1.7479 3.0076-3.904 3.0076z" fill="#f55" stroke-width=".11941" style="paint-order:markers fill stroke"/>
   <polygon transform="matrix(.1686 0 0 .14984 -40.177 295.43)" points="222.85 266.17 303.88 219.38 222.85 172.6" fill="#fff" style="paint-order:markers fill stroke"/>
   <rect x="-19.291" y="309.03" width="46.176" height="38.176" fill="none" stroke="#808080" stroke-width="1.8241" style="paint-order:stroke markers fill"/>
  </g>

@@ -5,6 +5,7 @@ script.textContent = `
 
 // Options Reset on Load
 var boostYouTubePefs = Object.assign(window.boostYouTubePefs || [], {
+    playlist : 'XxXxXxXxXxX', // playlist name
     stopvideo : false,      // stop autoplay video when load
     showres: false,         // show resolution
     showrate: false,        // show speed playback
@@ -136,15 +137,34 @@ var showcurspeedandres = function(e) {
     //this.classList.add('ytby-init'); // I forgot why this line
 }
 
+var autoplaypls = function( ) {
+    this.removeEventListener('play', autoplaypls);
+    var inx = document.location.href.match(/index=/);
+    if (inx !== null) {
+        var pls = document.location.href.match(/list=([^\&\?\/]+)/)[1];
+        if (pls !== boostYouTubePefs.playlist ) {
+            boostYouTubePefs.playlist = pls;
+            prefs.isStopVideoTrigger = true;
+        }
+    }
+}
+
 function loadplayerinfo() {
+    var inx = document.location.href.match(/index=/);
+    if (inx === null || boostYouTubePefs.playlist !== document.location.href.match(/list=([^\&\?\/]+)/)[1]) {
+        prefs.isStopVideoTrigger = false;
+        boostYouTubePefs.playlist = 'XxXxXxXxXxX';
+    } 
 
     if (p = document.getElementsByTagName('video')[0]) {
+
         if( boostYouTubePefs.stopvideo && !prefs.isStopVideoTrigger && 
                     (v = document.getElementById('movie_player')) !== null) {
             v.stopVideo();
             //  Need create somewhere Event: 
             //    when Click on Stoped Video then => prefs.isStopVideoTrigger = true;
             //    But I'm too tired
+            p.addEventListener('play', autoplaypls);
         }
         if ((boostYouTubePefs.showres || boostYouTubePefs.showrate) && prefs.isOSDTrigger === false) {
             p.addEventListener('play', showcurspeedandres);
