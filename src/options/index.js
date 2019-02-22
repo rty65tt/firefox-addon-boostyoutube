@@ -14,7 +14,7 @@ function restore () {
     document.getElementById('showres').checked = prefs.showres;
     document.getElementById('showrate').checked = prefs.showrate;
     document.getElementById('scale').checked = prefs.scale;
-    document.getElementById('defscale').checked = prefs.scale;
+    document.getElementById('defscale').checked = prefs.defscale;
     document.getElementById('hidectrls').checked = prefs.hidectrls;
     document.getElementById('shortcut').checked = prefs.shortcut;
   });

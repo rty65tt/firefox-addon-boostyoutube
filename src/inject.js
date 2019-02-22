@@ -9,8 +9,8 @@ var boostYouTubePefs = Object.assign(window.boostYouTubePefs || [], {
     stopvideo : false,      // stop autoplay video when load
     showres: false,         // show resolution
     showrate: false,        // show speed playback
-    scale: false,           // scale 
-    defscale: false,           // defscale 
+    scale: false,           // scale
+    defscale: false,        // defscale
     hidectrls: false        // hide controls in fullscreen
 });
 
@@ -37,6 +37,7 @@ var natres = function(e) {
     var vw = v.videoWidth;
     var vh = v.videoHeight;
 
+console.log("2222222222  " + (e.keyCode || e.type));
     if (e.keyCode == 82 || (e.type === "fullscreenchange" && boostYouTubePefs.defscale)){
         if (sh >= vh) {
             var vhr = vh + "px";
@@ -190,17 +191,14 @@ function loadplayerinfo() {
 
     if (boostYouTubePefs.scale && prefs.isScaleTrigger === false) {
         document.addEventListener("keydown", natres);
-        if (boostYouTubePefsd.defscale) {
-            document.addEventListener("fullscreenchange", natres);
-        }
+        document.addEventListener("fullscreenchange", natres);
         prefs.isScaleTrigger = true;
     } else if (boostYouTubePefs.scale  === false && prefs.isScaleTrigger) {
         document.removeEventListener("keydown", natres);
+        document.removeEventListener("fullscreenchange", natres);
         prefs.isScaleTrigger = false;
     }
-    if (!boostYouTubePefs.defscale) {
-        document.removeEventListener("fullscreenchange", natres);
-    }
+
 
 }
 var b = document.getElementsByTagName('body')[0];
