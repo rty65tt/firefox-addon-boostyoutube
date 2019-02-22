@@ -27,7 +27,6 @@ var prefs = {
 
 // Fullscreen scale resolution
 var natres = function(e) {
-    console.log("1111111111");
 
   if (window.fullScreen) {
     var v = document.getElementsByTagName('video')[0];
@@ -37,7 +36,6 @@ var natres = function(e) {
     var vw = v.videoWidth;
     var vh = v.videoHeight;
 
-console.log("2222222222  " + (e.keyCode || e.type));
     if (e.keyCode == 82 || (e.type === "fullscreenchange" && boostYouTubePefs.defscale)){
         if (sh >= vh) {
             var vhr = vh + "px";
