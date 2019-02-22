@@ -10,6 +10,7 @@ var boostYouTubePefs = Object.assign(window.boostYouTubePefs || [], {
     showres: false,         // show resolution
     showrate: false,        // show speed playback
     scale: false,           // scale 
+    defscale: false,           // defscale 
     hidectrls: false        // hide controls in fullscreen
 });
 
@@ -26,6 +27,7 @@ var prefs = {
 
 // Fullscreen scale resolution
 var natres = function(e) {
+    console.log("1111111111");
 
   if (window.fullScreen) {
     var v = document.getElementsByTagName('video')[0];
@@ -35,7 +37,7 @@ var natres = function(e) {
     var vw = v.videoWidth;
     var vh = v.videoHeight;
 
-    if (e.keyCode == 82) {
+    if (e.keyCode == 82 || (e.type === "fullscreenchange" && boostYouTubePefs.defscale)){
         if (sh >= vh) {
             var vhr = vh + "px";
             if (vhr !== v.style.height) {
@@ -188,10 +190,16 @@ function loadplayerinfo() {
 
     if (boostYouTubePefs.scale && prefs.isScaleTrigger === false) {
         document.addEventListener("keydown", natres);
+        if (boostYouTubePefsd.defscale) {
+            document.addEventListener("fullscreenchange", natres);
+        }
         prefs.isScaleTrigger = true;
     } else if (boostYouTubePefs.scale  === false && prefs.isScaleTrigger) {
         document.removeEventListener("keydown", natres);
         prefs.isScaleTrigger = false;
+    }
+    if (!boostYouTubePefs.defscale) {
+        document.removeEventListener("fullscreenchange", natres);
     }
 
 }
@@ -213,6 +221,7 @@ browser.storage.local.get({
     showres: true,
     showrate: true,
     scale: true,
+    defscale: true,
     hidectrls: true
     }, prefs => {
     window.postMessage({
@@ -223,7 +232,7 @@ browser.storage.local.get({
 
 browser.storage.onChanged.addListener(ps => {
   const prefs = Object.keys(ps)
-    .filter(n => n === 'showres' || n === 'showrate' || n === 'scale' || n === 'hidectrls')
+    .filter(n => n === 'showres' || n === 'showrate' || n === 'scale' || n === 'defscale' || n === 'hidectrls')
     .reduce((p, n) => {
       p[n] = ps[n].newValue;
       return p;
