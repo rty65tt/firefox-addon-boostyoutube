@@ -36,47 +36,18 @@ var natres = function(e) {
     var vw = v.videoWidth;
     var vh = v.videoHeight;
 
-    if (e.keyCode == 82 || (e.type === "fullscreenchange" && boostYouTubePefs.defscale)){
-        if (sh >= vh) {
-            var vhr = vh + "px";
-            if (vhr !== v.style.height) {
-                v.style.height = vhr;
-                v.style.top = ((sh - vh) / 2) + 'px';
-            }
-            else {
-                v.style.height = sh + "px";
-                v.style.top = '0px';
-            }
+    var scale = vh/sh;
+
+
+    if (e.keyCode == 82 || (e.type === "fullscreenchange" && boostYouTubePefs.defscale)) {
+        if (v.style.scale == 1) {
+            v.style.scale = scale;
         }
-        if (sh <= vh) {
-            var vhr = vh + "px";
-            if (vhr !== v.style.height) {
-                v.style.height = vhr;
-                v.style.width = vw + 'px';
-                v.style.top = '-' + ((vh - sh ) / 2) + 'px';
-                v.style.left = '-' + ((vw - sw ) / 2) + 'px';
-            }
-            else {
-                v.style.height = sh + "px";
-                v.style.width = sw + "px";
-                v.style.top = '0px';
-                v.style.left = '0px';
-            }
+        else {
+            v.style.scale = 1;
         }
     }
 
-    if (e.keyCode == 87 && parseInt(v.style.top, 10) < 0) { 
-        v.style.top = parseInt(v.style.top, 10) + 1 + 'px';
-    }
-    if (e.keyCode == 65 && parseInt(v.style.left, 10) < 0){  // left
-        v.style.left = parseInt(v.style.left, 10) + 1 + 'px';
-    }
-    if (e.keyCode == 68 && parseInt(v.style.left, 10) > (sw - vw) && v.style.width !== (sw + "px")) {
-        v.style.left = parseInt(v.style.left, 10) - 1 + 'px';
-    }
-    if (e.keyCode == 83 && parseInt(v.style.top, 10) > (sh - vh) && v.style.height !== (sh + "px")) {
-        v.style.top = parseInt(v.style.top, 10) - 1 + 'px';
-    }
   }
 }
 

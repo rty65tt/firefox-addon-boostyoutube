@@ -4,7 +4,7 @@
   "homepage_url": "https://github.com/rty65tt/firefox-addon-boostyoutube",
   "author": "rty65tt",
   "manifest_version": 2,
-  "version": "1.4",
+  "version": "1.6",
   "default_locale": "en",
   "short_name": "boostyoutube",
   "permissions": [
@@ -46,10 +46,10 @@
      "default_icon": { "19":"icons/icon.svg" },
      "default_title": "Open|Switch [maxres|sd|hq]default.jpg"
   },
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "boostyoutube@rty65tt.org",
-      "strict_min_version": "52.0"
+      "strict_min_version": "80.0"
     }
   }
 }
