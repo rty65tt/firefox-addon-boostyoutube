@@ -6,8 +6,9 @@
 - Switch scale video to real resolution (press 'R' in fullscreen).
 - Show current video playback rate and video resolution in OSD. 
 - Hide playback controls in fullsceen.
-- Shortcut "Alt+Y" open YouTube in new tab (>=48 ver.).
-- View Video Thumbnails (>=59 ver).
+- Shortcut "Alt+Y" open YouTube in new tab.
+- View Video Thumbnails.
+
 
 View Video Thumbnails.
 

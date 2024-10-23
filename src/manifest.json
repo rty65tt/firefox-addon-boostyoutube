@@ -4,7 +4,7 @@
   "homepage_url": "https://github.com/rty65tt/firefox-addon-boostyoutube",
   "author": "rty65tt",
   "manifest_version": 2,
-  "version": "1.6",
+  "version": "1.7",
   "default_locale": "en",
   "short_name": "boostyoutube",
   "permissions": [

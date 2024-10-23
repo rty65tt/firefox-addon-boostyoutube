@@ -6,7 +6,7 @@ function restore () {
     showres: true,
     showrate: true,
     scale: true,
-    defscale: true,
+    defscale: false,
     hidectrls: true,
     shortcut: true
   }, (prefs) => {

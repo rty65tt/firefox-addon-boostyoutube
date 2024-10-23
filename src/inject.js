@@ -27,10 +27,8 @@ var prefs = {
 
 // Fullscreen scale resolution
 var natres = function(e) {
-
+  var v = document.getElementsByTagName('video')[0];
   if (window.fullScreen) {
-    var v = document.getElementsByTagName('video')[0];
-
     var sw = screen.width;
     var sh = screen.height;
     var vw = v.videoWidth;
@@ -38,17 +36,20 @@ var natres = function(e) {
 
     var scale = vh/sh;
 
-
     if (e.keyCode == 82 || (e.type === "fullscreenchange" && boostYouTubePefs.defscale)) {
-        if (v.style.scale == 1) {
-            v.style.scale = scale;
+        if (prefs.isScaleTrigger) {
+            v.style.scale = 1;
+            prefs.isScaleTrigger = false;
         }
         else {
-            v.style.scale = 1;
+            v.style.scale = scale;
+            prefs.isScaleTrigger = true;
         }
+    } 
+  } else {
+      v.style.scale = 1;
+      prefs.isScaleTrigger = false;
     }
-
-  }
 }
 
 /********************************
@@ -188,7 +189,7 @@ browser.storage.local.get({
     showres: true,
     showrate: true,
     scale: true,
-    defscale: true,
+    defscale: false,
     hidectrls: true
     }, prefs => {
     window.postMessage({
